@@ -11,7 +11,7 @@
             <lightning:button label="Refresh" onclick="{!c.refrashDataGrid}"/>
         </aura:set>
         <p class="slds-p-horizontal_small">
-            <ul>
+            <ol class="slds-list_ordered">
                 <aura:iteration items="{!v.dataList}" var="listItem">
                     <li>
                         {!listItem.name} - {!listItem.value}
@@ -23,7 +23,7 @@
                         </aura:if>
                     </li>
                 </aura:iteration>
-            </ul>
+            </ol>
         </p>
     </lightning:card>
 
