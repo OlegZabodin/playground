@@ -13,7 +13,15 @@
         <p class="slds-p-horizontal_small">
             <ul>
                 <aura:iteration items="{!v.dataList}" var="listItem">
-                    <li>{!listItem.name} - {!listItem.value}</li>
+                    <li>
+                        {!listItem.name} - {!listItem.value}
+                        <aura:if isTrue="{!greaterthan(listItem.value, 1)}" >
+                            records
+                            <aura:set attribute="else">
+                                record
+                            </aura:set>
+                        </aura:if>
+                    </li>
                 </aura:iteration>
             </ul>
         </p>
