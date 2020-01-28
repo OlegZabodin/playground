@@ -11,7 +11,6 @@
                 component.set('v.dataList', wrapper.dataList);
             } else {
                 console.debug('------ error -----');
-                //helper.showErrorToast(component, event, helper)
             }
         });
         $A.enqueueAction(action);
