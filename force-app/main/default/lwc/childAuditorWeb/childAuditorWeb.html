@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child Auditor">
+        <lightning-button slot="actions" label="Refresh" onclick={refrashDataGrid}></lightning-button>
+        <ol class="slds-list_ordered">
+            <template for:each={dataList} for:item="listItem">
+                <li key={listItem.name}>
+                    {listItem.name} - {listItem.value}
+                    <c-popular-title title={listItem}></c-popular-title>
+                </li>
+            </template>
+        </ol>
+    </lightning-card>
+</template>
